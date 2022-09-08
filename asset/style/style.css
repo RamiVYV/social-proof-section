@@ -1,0 +1,213 @@
+/* ---------------------FONTS------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+/* ---------------------VAR------------------ */
+:root{
+    --League_Spartan:'League Spartan', sans-serif;
+    --Very_Dark_Magenta: hsl(300, 43%, 22%);
+    --Soft_Pink: hsl(333, 80%, 67%);
+    --Dark_Grayish_Magenta: hsl(303, 10%, 53%);
+    --Light_Grayish_Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+/* ---------------------ALL-------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+body{
+    font-size: var(--League_Spartan);
+    font-weight: 700;
+    /* background-image: url(../img/bg-pattern-top-mobile.svg),url(../img/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat; */
+   }
+/* ---------------------MAIN-TITLE------------- */
+.gridContainer{
+    width: 100vw;
+    /* min-height: 100vh; */
+    display: grid;
+    grid-template-areas: 
+                        ". title . "
+                        ". rateContainer ."
+                        ". personalCard ."
+;
+grid-template-columns:    1fr 21rem 1fr ;
+grid-template-rows:14rem 18rem 49rem ;
+margin: 5rem 0;
+
+}
+/* ----------------------RATE------------------- */
+.title{
+    grid-area: title;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    
+}
+.tittle__main{
+    font-size: 2.5rem;
+    color: var(--Very_Dark_Magenta);
+    text-align: center;
+    font-weight: 700;
+    text-align: center;
+}
+.title__description{
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--Dark_Grayish_Magenta);
+    text-align: center;
+}
+.rateContainer{
+    grid-area: rateContainer;/* height: 5rem; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.rateContainer_card{
+    height: 5rem;
+    width: 20rem;
+    background-color: var(--Light_Grayish_Magenta);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+.personalCard{
+    grid-area: personalCard;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.personalCard__testimony{
+    height: 25rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: var(--White);
+    font-weight: 500;
+    background-color: var(--Very_Dark_Magenta);
+}
+.div__title{
+    display: flex;
+    gap: 3rem;
+}
+.div__title--p{
+    display: flex;
+    flex-direction: column;
+}
+.personalCard__testimony__img{
+    height: 3.5rem;
+    border-radius: 50%; 
+}
+.personalCard__testimony--title{
+    font-size: 1.5rem;
+    height: 100%;
+
+}
+.personalCard__testimony--subtitle{
+    font-size: 1rem;
+    color: var(--Dark_Grayish_Magenta);
+    margin-bottom: 2rem;
+    
+}
+.personalCard__testimony--description{
+    font-family: var(--League_Spartan);
+    font-weight: 700;
+    /* letter-spacing: .1rem; */
+}
+
+/* ---------------------OPINIONS--------------- */
+
+/* ---------------------FONTS------------------ */
+.attribution {font-size: 11px;text-align: center;}
+.attribution a {color: hsl(228, 45%, 44%);}
+
+
+@media(min-width:1020px){
+    .gridContainer{
+        grid-template-areas:
+                            ". leftCorner rightCorner ."
+                            ". cardGrid cardGrid ."
+             ;
+        grid-template-columns: 1fr 25rem 32rem 1fr;
+        grid-template-rows:     18rem 19rem;
+        margin:.5rem 0;
+        row-gap:0.5rem;
+    }
+
+    .title{
+        grid-area: leftCorner ;
+        
+    }
+    .tittle__main{
+        font-size: 3rem;
+        font-family: var(--League_Spartan);
+        font-weight: 700;
+        text-align:left ;
+    }
+    .title__description{
+        font-size: 1.3rem;
+        font-family: var(--League_Spartan);
+        font-weight: 700;
+        text-align:left ;
+    }
+    .rateContainer{
+        grid-area:  rightCorner;
+        align-items: flex-start;
+        justify-content: space-evenly;
+       
+    }
+    .rateContainer_card{
+        height: 3.5rem;
+        width: 25rem;
+        color: var(--Very_Dark_Magenta);
+        gap: 0rem;       
+    }
+    .rateContainer_card2{
+        margin-left: 3.5rem;    
+    }
+    .rateContainer_card3{
+        margin-left: 7rem;    
+    }
+    .personalCard{
+        grid-area:  cardGrid;
+        flex-direction: row;
+        margin-top: 0;
+        
+    }
+    .personalCard__testimony{
+        height: 13rem;
+        width: 20rem;
+        padding: 1.9rem; 
+    }
+    .personalCard__testimony--title{
+        font-size: 1rem;
+        height: 100%;
+    
+    }
+    .personalCard__testimony--subtitle{
+        font-size: .8rem; 
+        margin-bottom: .5rem;
+    } 
+    .personalCard__testimony--description{
+            font-size: .9rem;
+}
+    .botomMarginUno{
+        margin-top: 3rem;
+
+    }
+    .botomMarginDos{
+        margin-top: 6rem;
+    }
+ }
